@@ -24,3 +24,6 @@ formik
 react-lottie
 react-slick
 react-custom-pagination
+
+## Demo Link
+https://fups.netlify.app/
