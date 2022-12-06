@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: local('Sofia Pro'), url(../fonts/sofiapro-light.otf) format('truetype');
+}
+
+body {
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+#login-banner {
+    background-image: url(../img/login-banner.png);
+    background-position-y: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+select {
+    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    background-position: calc(100% - 1.2rem) center !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding-right: 3rem !important;
+}
+
+#popup-modal {
+    transform: translate(-50%, -50%);
+}
+
+.lf-player-container svg {
+    width: 300px !important;
+}
+
+.user-notification::after {
+    content: '12';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: #f20028;
+    color: white;
+    border-radius: 100%;
+    font-size: 10px;
+    text-align: center;
+}
+
+.dashboard .wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #f5f5fa;
+    align-items: inherit;
+}
+
+.layout {
+    flex: auto;
+    min-height: 0;
+}
+
+.slick-prev {
+    position: absolute;
+    top: -9px;
+    right: 25px;
+    left: auto;
+}
+
+.slick-next {
+    position: absolute;
+    top: -9px;
+    right: 0;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #155ed4;
+    opacity: 1;
+}
+
+.slick-slide {
+    padding: 0 7px;
+}
+
+.slick-dots {
+    bottom: -50px;
+}
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
+}
+
+.food {
+    background-color: purple;
+    border-radius: 50px;
+    height: 4rem;
+}
+
+.transfer {
+    background-color: #26bf66;
+    border-radius: 50px;
+    height: 4rem;
+}
+
+.money {
+    background-color: #ffb44d;
+    border-radius: 50px;
+    height: 4rem;
+}
+
+.account-activities .pagination div {
+    gap: 10px;
+}
+
+.account-activities .transfer-process,
+.food-process,
+.money-process {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-activities .transfer-process span:nth-child(1) {
+    color: #26bf66;
+}
+
+.account-activities .food-process span:nth-child(1) {
+    color: #f20028;
+}
+
+.bm-item{
+    display:flex !important;
+    align-items: center;
+}
+
+@media(max-width:640px) {
+    .account-activities .transfer-process,
+    .food-process,
+    .money-process {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:1280px) {
+    #wrapper::before {
+        content: '';
+        background: url('../img/svg/media/image-register.svg');
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 23rem;
+        height: 23rem;
+        background-size: cover;
+        z-index: -1;
+    }
+}
